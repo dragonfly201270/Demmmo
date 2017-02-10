@@ -6,7 +6,7 @@
 # install appdynamics agent
 curl -H "Accept: application/zip" https://codeload.github.com/dragonfly201270/agent/zip/master -o /home/jboss/source/newrelic.zip
 
-pushd /home/jboss/source
+pushd /opt/eap/
 unzip newrelic.zip
     pushd agent-master/
     mv newrelic/ ../
