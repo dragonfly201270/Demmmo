@@ -4,13 +4,6 @@
 /usr/local/s2i/assemble
 
 # install appdynamics agent
-curl -H "Accept: application/zip" https://codeload.github.com/dragonfly201270/agent/zip/master -o /opt/eap/newrelic.zip
+curl -H "Accept: application/zip" https://codeload.github.com/dragonfly201270/agent/zip/master -o /opt/eap/
 
-pushd /opt/eap/
-unzip newrelic.zip
-    pushd agent-master/
-    mv newrelic/ ../
-    popd
-rm -rf agent-master/
-rm -f newrelic.zip
-popd
+
