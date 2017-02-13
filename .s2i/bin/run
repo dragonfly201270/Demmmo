@@ -13,6 +13,11 @@ java -jar newrelic.jar install -s /opt/eap/
 #change directory to /opt/eap/bin
 cd bin
 
+echo "Running javaagent"
+
+#javaagent:/opt/eap/newrelic/newrelic.jar
 #REPLACE the line standalone.conf
-sed -i 's/opt\/eap\/newrealic\/newrelic.jar/opt\/eap\/newrelic.jar' standalone.conf
+
+echo "Replacing Content"
+sed -i 's/javaagent:\/opt\/eap\/newrelic\/newrelic.jar/javaagent:\/opt\/eap\/newrelic.jar' standalone.conf
 exec /usr/local/s2i/run
