@@ -7,13 +7,13 @@ export JAVA_OPTIONS="-javaagent:/opt/eap/newrelic.jar –D newrelic.environment=
 cp /home/jboss/source/newrelic/* /opt/eap/
 cd /opt/eap/
 
+echo "Running Java -jar"
+
 #install from the provided jar file
 java -jar newrelic.jar install -s /opt/eap/
 
 #change directory to /opt/eap/bin
 cd bin
-
-echo "Running javaagent"
 
 #javaagent:/opt/eap/newrelic/newrelic.jar
 #REPLACE the line standalone.conf
