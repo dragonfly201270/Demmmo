@@ -19,5 +19,5 @@ cd bin
 #REPLACE the line standalone.conf
 
 echo "Replacing Content"
-sed -i 's/javaagent:\/opt\/eap\/newrelic\/newrelic.jar/javaagent:\/opt\/eap\/newrelic.jar' standalone.conf
+sed -i "s/javaagent:\/opt\/eap\/newrelic\/newrelic.jar/javaagent:\/opt\/eap\/newrelic.jar" standalone.conf
 exec /usr/local/s2i/run
